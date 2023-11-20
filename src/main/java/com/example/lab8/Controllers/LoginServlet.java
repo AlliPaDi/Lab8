@@ -1,5 +1,6 @@
 package com.example.lab8.Controllers;
 
+import com.example.lab8.Beans.ListaNegra;
 import com.example.lab8.Beans.Usuario;
 import com.example.lab8.Beans.UsuarioCredenciales;
 import com.example.lab8.Daos.UsuarioDao;
@@ -8,7 +9,6 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
-
 @WebServlet(name = "LoginServlet", value = {"/LoginServlet", ""})
 public class LoginServlet extends HttpServlet {
     @Override
@@ -103,6 +103,8 @@ public class LoginServlet extends HttpServlet {
             }
 
             if (edad <= 12) {
+                ListaNegra listaNegra = new ListaNegra();
+                listaNegra.setCorreo(correo);
                 throw new IllegalArgumentException("El usuario debe ser mayor de 12 años.");
             }
 

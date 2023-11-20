@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ALLISON
-  Date: 18/11/2023
-  Time: 05:26
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,8 +9,9 @@
 <body>
 <div>
     <jsp:include page="includes/navbar.jsp">
-        <jsp:param name="currentPage" value="job"/>
+        <jsp:param name="currentPage" value="war"/>
     </jsp:include>
 </div>
 </body>
 </html>
+
